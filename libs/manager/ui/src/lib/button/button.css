@@ -22,3 +22,16 @@
 .julia-button--secondary:hover {
   background: var(--color-surface-muted);
 }
+
+.julia-button[data-disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.julia-button[data-disabled]:hover {
+  background: var(--color-primary);
+}
+
+.julia-button--secondary[data-disabled]:hover {
+  background: transparent;
+}
