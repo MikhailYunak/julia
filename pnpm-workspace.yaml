@@ -7,3 +7,6 @@ allowBuilds:
   "@nestjs/core": false
   lmdb: true
   msgpackr-extract: true
+minimumReleaseAgeExclude:
+  - '@spartan-ng/cli@1.6.3'
+  - '@spartan-ng/brain@1.6.3'

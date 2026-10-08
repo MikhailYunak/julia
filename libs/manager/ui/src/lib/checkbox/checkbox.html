@@ -1,0 +1,10 @@
+<brn-checkbox
+  class="julia-checkbox"
+  [checked]="checked()"
+  [disabled]="disabled()"
+  (checkedChange)="checkedChange.emit($event)"
+>
+  @if (checked()) {
+    <span class="julia-checkbox__mark">✓</span>
+  }
+</brn-checkbox>

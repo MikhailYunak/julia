@@ -1,4 +1,12 @@
 <header>
   <julia-button>Manager cabinet</julia-button>
+  <!-- biome-ignore lint/a11y/noLabelWithoutControl: julia-checkbox wraps a native button[role=checkbox] and self-associates with this label at runtime -->
+  <label>
+    <julia-checkbox
+      [checked]="exampleChecked()"
+      (checkedChange)="exampleChecked.set($event)"
+    />
+    offers:read
+  </label>
 </header>
 <router-outlet></router-outlet>
