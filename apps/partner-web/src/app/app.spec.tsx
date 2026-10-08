@@ -8,8 +8,8 @@ describe('App', () => {
     expect(baseElement).toBeTruthy();
   });
 
-  it('should render the app name', () => {
-    const { getAllByText } = render(<App />);
-    expect(getAllByText(/partner-web/gi).length > 0).toBeTruthy();
+  it('renders the shared Button component', () => {
+    const { getByText } = render(<App />);
+    expect(getByText('Partner cabinet')).toBeTruthy();
   });
 });

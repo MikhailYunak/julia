@@ -2,7 +2,15 @@
   "compileOnSave": false,
   "compilerOptions": {
     "rootDir": ".",
-    "paths": {},
+    "paths": {
+      "@julia/shared/contracts": ["./libs/shared/contracts/src/index.ts"],
+      "@julia/shared/permissions": ["./libs/shared/permissions/src/index.ts"],
+      "@julia/shared/design-tokens": [
+        "./libs/shared/design-tokens/src/index.ts"
+      ],
+      "@julia/manager/ui": ["./libs/manager/ui/src/index.ts"],
+      "@julia/partner/ui": ["./libs/partner/ui/src/index.ts"]
+    },
     "importHelpers": true,
     "isolatedModules": true,
     "lib": ["es2022", "dom"],
