@@ -1,0 +1,9 @@
+{
+  "name": "partner-web",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/partner-web/src",
+  "projectType": "application",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project partner-web --web",
+  "targets": {}
+}

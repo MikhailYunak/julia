@@ -1,2 +1,9 @@
 packages:
   - 'packages/*'
+allowBuilds:
+  '@parcel/watcher': true
+  unrs-resolver: true
+  esbuild: false
+  "@nestjs/core": false
+  lmdb: true
+  msgpackr-extract: true
