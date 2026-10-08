@@ -6,7 +6,11 @@
   "scripts": {
     "lint": "biome check .",
     "format": "biome format --write .",
-    "check-boundaries": "nx run workspace:check-boundaries"
+    "check-boundaries": "nx run workspace:check-boundaries",
+    "serve:api": "nx serve api",
+    "serve:manager-web": "nx serve manager-web",
+    "serve:partner-web": "nx serve partner-web",
+    "test:all": "nx run-many -t build test check-boundaries"
   },
   "private": true,
   "devDependencies": {

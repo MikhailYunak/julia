@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Serve: All" type="CompoundRunConfigurationType">
+    <toRun name="Serve: API" type="ShConfigurationType" />
+    <toRun name="Serve: Manager Web" type="ShConfigurationType" />
+    <toRun name="Serve: Partner Web" type="ShConfigurationType" />
+    <method v="2" />
+  </configuration>
+</component>
