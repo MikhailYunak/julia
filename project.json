@@ -1,0 +1,13 @@
+{
+  "name": "workspace",
+  "$schema": "./node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "targets": {
+    "check-boundaries": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "node tools/check-boundaries.mts"
+      }
+    }
+  }
+}

@@ -42,6 +42,66 @@
           }
         }
       }
+    },
+    {
+      "includes": ["apps/manager-web/**", "libs/manager/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noRestrictedImports": {
+              "level": "error",
+              "options": {
+                "patterns": [
+                  {
+                    "group": ["@julia/partner/*"],
+                    "message": "scope:manager may not depend on scope:partner — see tools/check-boundaries.mts"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "includes": ["apps/partner-web/**", "libs/partner/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noRestrictedImports": {
+              "level": "error",
+              "options": {
+                "patterns": [
+                  {
+                    "group": ["@julia/manager/*"],
+                    "message": "scope:partner may not depend on scope:manager — see tools/check-boundaries.mts"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "includes": ["apps/api/**", "libs/api/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noRestrictedImports": {
+              "level": "error",
+              "options": {
+                "patterns": [
+                  {
+                    "group": ["@julia/manager/*", "@julia/partner/*"],
+                    "message": "scope:api may not depend on frontend-only code — see tools/check-boundaries.mts"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
     }
   ]
 }

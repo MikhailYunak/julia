@@ -4,7 +4,7 @@
   "projectType": "application",
   "sourceRoot": "apps/partner-web-e2e/src",
   "implicitDependencies": ["partner-web"],
-  "tags": [],
+  "tags": ["scope:partner", "type:e2e"],
   "// targets": "to see all targets run: nx show project partner-web-e2e --web",
   "targets": {}
 }

@@ -5,7 +5,8 @@
   "packageManager": "pnpm@11.25.0",
   "scripts": {
     "lint": "biome check .",
-    "format": "biome format --write ."
+    "format": "biome format --write .",
+    "check-boundaries": "nx run workspace:check-boundaries"
   },
   "private": true,
   "devDependencies": {

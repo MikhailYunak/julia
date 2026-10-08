@@ -4,6 +4,7 @@
   "projectType": "application",
   "sourceRoot": "apps/manager-web-e2e/src",
   "implicitDependencies": ["manager-web"],
+  "tags": ["scope:manager", "type:e2e"],
   "// targets": "to see all targets run: nx show project manager-web-e2e --web",
   "targets": {}
 }
