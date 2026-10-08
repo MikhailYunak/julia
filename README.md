@@ -71,20 +71,21 @@ The core feature, built right after auth and before any business module:
 | 2 | Go tracker, ClickHouse, Vue auth portal, load testing | `v0.2` | ⬜ planned |
 | 3 | WebSockets: notifications, live stats | `v0.3` | ⬜ planned |
 
-Currently in Stage 0: the Nx workspace is scaffolded and tool-chained (pnpm, Biome, Vitest to follow); no apps exist yet.
+Currently in Stage 0: the Nx workspace is scaffolded and tool-chained (pnpm, Biome, Vitest), and the three Stage 1 apps are generated — `apps/api` (NestJS), `apps/manager-web` (Angular), `apps/partner-web` (React) — but still empty shells with no auth, permissions, or business logic yet. No shared libraries, database, or CI pipeline yet either.
 
 ## Tooling
 
 - **Package manager:** pnpm (pinned via `packageManager` in `package.json`)
 - **Monorepo:** [Nx](https://nx.dev)
 - **Lint & format:** [Biome](https://biomejs.dev) — `pnpm lint`, `pnpm format`
-- **Tests:** Vitest (unit), Playwright (e2e) — wired in as apps are generated
+- **Tests:** [Vitest](https://vitest.dev) (unit), [Playwright](https://playwright.dev) (e2e)
 
 ## Quick start
 
 ```sh
 pnpm install
 pnpm lint
+pnpm nx run-many -t build test
 ```
 
-More commands land here as apps and infra (`docker compose up`, `nx run-many -t serve`) come online in later stages.
+Run a single app in dev mode with `pnpm nx serve api`, `pnpm nx serve manager-web`, or `pnpm nx serve partner-web` — there's nothing behind them yet beyond the Nx-generated starter page. `docker compose up` and seeded data land with the database in Stage 1.
