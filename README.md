@@ -1,4 +1,4 @@
-# Affiliate Platform
+# Julia
 
 A demo affiliate-marketing platform built as a single Nx monorepo, showcasing a role-based permissions system (CASL) and manager-into-partner account impersonation as its core feature. Built in public, stage by stage — see [status](#status) below.
 
