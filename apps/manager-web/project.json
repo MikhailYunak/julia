@@ -5,6 +5,7 @@
   "prefix": "app",
   "sourceRoot": "apps/manager-web/src",
   "tags": ["scope:manager", "type:app"],
+  "implicitDependencies": ["design-tokens"],
   "targets": {
     "build": {
       "executor": "@angular/build:application",

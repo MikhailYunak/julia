@@ -1,9 +1,22 @@
 /**
  * Design tokens shared by every frontend. Import this once per app (e.g. in
- * its global stylesheet); components reference the variables, never raw
- * values, so all three cabinets stay visually consistent by construction.
+ * its global stylesheet, after `@import "tailwindcss"`); components
+ * reference the variables, never raw values, so all three cabinets stay
+ * visually consistent by construction.
+ *
+ * This is also the project's Tailwind preset: names under recognized
+ * Tailwind v4 namespaces (--color-*, --font-*, --spacing-*, --radius-*)
+ * double as utility classes (bg-primary, font-sans, p-md, rounded-md, ...).
+ * Names outside those namespaces (--font-size-*) are still plain CSS
+ * custom properties, just without a generated utility.
+ *
+ * `static` forces Tailwind to always emit every variable as a :root
+ * custom property — by default it tree-shakes theme values that aren't
+ * referenced by a utility class in the scanned source files, but our
+ * component stylesheets consume several of these directly via var(),
+ * which that scan doesn't see.
  */
-:root {
+@theme static {
   --color-primary: #4f46e5;
   --color-primary-hover: #4338ca;
   --color-primary-contrast: #ffffff;
@@ -18,16 +31,16 @@
   --color-danger: #dc2626;
   --color-success: #16a34a;
 
-  --font-family-base: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;
   --font-size-lg: 1.125rem;
 
-  --space-xs: 0.25rem;
-  --space-sm: 0.5rem;
-  --space-md: 1rem;
-  --space-lg: 1.5rem;
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
 
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;

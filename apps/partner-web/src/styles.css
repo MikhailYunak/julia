@@ -1,8 +1,9 @@
+@import "tailwindcss";
 @import "../../../libs/shared/design-tokens/src/tokens.css";
 
 body {
   margin: 0;
-  font-family: var(--font-family-base);
+  font-family: var(--font-sans);
   color: var(--color-text);
   background: var(--color-surface-muted);
 }

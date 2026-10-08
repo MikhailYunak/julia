@@ -7,10 +7,14 @@ describe('tokens.css', () => {
   it.each([
     '--color-primary',
     '--color-text',
-    '--font-family-base',
-    '--space-md',
+    '--font-sans',
+    '--spacing-md',
     '--radius-md',
   ])('defines %s', (token) => {
     expect(css).toContain(`${token}:`);
+  });
+
+  it('wraps every token in a static @theme block so Tailwind always emits it', () => {
+    expect(css).toContain('@theme static {');
   });
 });

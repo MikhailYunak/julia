@@ -1,7 +1,7 @@
 .julia-button {
-  font-family: var(--font-family-base);
+  font-family: var(--font-sans);
   font-size: var(--font-size-base);
-  padding: var(--space-sm) var(--space-md);
+  padding: var(--spacing-sm) var(--spacing-md);
   border-radius: var(--radius-md);
   border: 1px solid transparent;
   background: var(--color-primary);
