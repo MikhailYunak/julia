@@ -71,7 +71,7 @@ The core feature, built right after auth and before any business module:
 | 2 | Go tracker, ClickHouse, Vue auth portal, load testing | `v0.2` | ⬜ planned |
 | 3 | WebSockets: notifications, live stats | `v0.3` | ⬜ planned |
 
-Currently in Stage 0: the Nx workspace is scaffolded and tool-chained (pnpm, Biome, Vitest), and the three Stage 1 apps are generated — `apps/api` (NestJS), `apps/manager-web` (Angular), `apps/partner-web` (React) — but still empty shells with no auth, permissions, or business logic yet. No shared libraries, database, or CI pipeline yet either.
+Currently in Stage 0: the Nx workspace is scaffolded and tool-chained (pnpm, Biome, Vitest, Tailwind v4), the three Stage 1 apps are generated — `apps/api` (NestJS), `apps/manager-web` (Angular), `apps/partner-web` (React) — shared libraries and module-boundary enforcement are in place (`libs/shared/*`, `libs/manager/ui`, `libs/partner/ui`, `tools/check-boundaries.mts`), and CI runs `nx affected -t lint test build check-boundaries` on every push/PR via GitHub Actions. Still no auth, permissions, business logic, or database — that's Stage 1.
 
 ## Tooling
 
